@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # ExciteブログのURLを指定
-url = 'https://takayukik.exblog.jp/243201922/'
+url = 'your_URL'
 
 # ウェブページの内容を取得
 response = requests.get(url)
