@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import csv
 
 # URLのリストが保存されているCSVファイルのパス
-csv_file = 'url_list.csv'
+csv_file = 'all_sitemaps_urls.csv'
 
 # URLリストの読み込み
 with open(csv_file, 'r', encoding='utf-8') as file:
@@ -21,7 +21,7 @@ for idx, url in enumerate(url_list):
             soup = BeautifulSoup(response.content, 'html.parser')
             
             # 記事本文を特定（HTML構造に基づき適宜変更）
-            article_body = soup.find('div', class_='post-text')
+            article_body = soup.find('div', class_='post-main')
             
             if article_body:
                 # テキストを抽出
